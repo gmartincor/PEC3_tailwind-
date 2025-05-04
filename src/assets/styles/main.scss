@@ -27,7 +27,7 @@
   
   /* Tarjeta de evento */
   .event-card {
-    @apply h-full bg-ecoGreen/5 rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-ecoGreen/10;
+    @apply h-full bg-ecoGreen/5 rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-ecoGreen/10;
   }
   
   /* Tarjeta de características */

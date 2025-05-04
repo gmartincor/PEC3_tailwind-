@@ -45,28 +45,33 @@
       <!-- Sección de características -->
       <section class="py-12">
         <div class="max-w-[1200px] mx-auto px-4">
-          <h2 class="text-3xl font-bold text-ecoGreen text-center mb-12 relative">Nuestras Actividades</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex flex-wrap mx-[-15px] justify-center">
             <!-- Característica 1 -->
-            <include src="./components/feature-card.html" locals='{
-              "icon": "fas fa-chalkboard-teacher", 
-              "title": "Conferencias", 
-              "description": "Expertos nacionales e internacionales compartirán su conocimiento y experiencia en economía circular."
-            }'></include>
+            <div class="w-full md:w-1/3 px-[15px] mb-8">
+              <div class="feature-card h-full">
+                <i class="fas fa-chalkboard-teacher text-4xl text-ecoGreen mb-6"></i>
+                <h3 class="text-xl font-bold text-ecoGreen mb-4">Conferencias</h3>
+                <p class="text-ecoGray">Expertos nacionales e internacionales compartirán su conocimiento y experiencia en economía circular.</p>
+              </div>
+            </div>
             
             <!-- Característica 2 -->
-            <include src="./components/feature-card.html" locals='{
-              "icon": "fas fa-hands-helping", 
-              "title": "Talleres", 
-              "description": "Participa en talleres prácticos para implementar la economía circular en tu entorno personal y profesional."
-            }'></include>
+            <div class="w-full md:w-1/3 px-[15px] mb-8">
+              <div class="feature-card h-full">
+                <i class="fas fa-hands-helping text-4xl text-ecoGreen mb-6"></i>
+                <h3 class="text-xl font-bold text-ecoGreen mb-4">Talleres</h3>
+                <p class="text-ecoGray">Participa en talleres prácticos para implementar la economía circular en tu entorno personal y profesional.</p>
+              </div>
+            </div>
             
             <!-- Característica 3 -->
-            <include src="./components/feature-card.html" locals='{
-              "icon": "fas fa-users", 
-              "title": "Networking", 
-              "description": "Conecta con profesionales, empresas y administraciones comprometidas con la sostenibilidad."
-            }'></include>
+            <div class="w-full md:w-1/3 px-[15px] mb-8">
+              <div class="feature-card h-full">
+                <i class="fas fa-users text-4xl text-ecoGreen mb-6"></i>
+                <h3 class="text-xl font-bold text-ecoGreen mb-4">Networking</h3>
+                <p class="text-ecoGray">Conecta con profesionales, empresas y administraciones comprometidas con la sostenibilidad.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
