@@ -16,57 +16,84 @@
 
     <main>
       <section class="py-12">
-        <div class="max-w-[1200px] mx-auto px-4">
+        <div class="container mx-auto px-4" style="max-width: 1200px;">
           <h1 class="text-4xl font-bold text-ecoGreen text-center mb-12 relative after:content-[''] after:block after:w-20 after:h-1 after:bg-ecoOrange after:mx-auto after:mt-4 after:rounded">Eventos y Talleres</h1>
           
-          <div class="flex flex-col items-center">
-            <!-- Evento 1 - Usando componente correctamente -->
-            <div class="w-1/2 mb-0">
-              <include src="./components/event-item.html" locals='{
-                "title": "Conferencia Inaugural: El Futuro Circular", 
-                "date": "15 Mayo, 10:00 - 12:00", 
-                "location": "Auditorio Principal", 
-                "description": "Conferencia inaugural que explorará los fundamentos de la economía circular y su potencial para transformar nuestra economía y sociedad.", 
-                "speaker": "Carlos Rodríguez, Profesor de Economía Ambiental"
-              }'></include>
-            </div>
-            
-            <!-- Evento 2 - Usando componente correctamente -->
-            <div class="w-1/2 mb-0">
-              <include src="./components/event-item.html" locals='{
-                "title": "Taller: Diseño Circular para Empresas", 
-                "date": "15 Mayo, 15:00 - 18:00", 
-                "location": "Sala de Workshops 1", 
-                "description": "Taller práctico donde aprenderás a implementar principios de diseño circular en productos y servicios empresariales.", 
-                "speaker": "María González, Directora de Sostenibilidad"
-              }'></include>
-            </div>
-            
-            <!-- Evento 3 - Usando componente correctamente -->
-            <div class="w-1/2 mb-0">
-              <include src="./components/event-item.html" locals='{
-                "title": "Panel: Políticas Públicas para la Circularidad", 
-                "date": "16 Mayo, 10:00 - 12:00", 
-                "location": "Auditorio Principal", 
-                "description": "Panel de discusión sobre políticas públicas que pueden acelerar la transición hacia una economía circular a nivel local, regional y nacional.", 
-                "speaker": "Ana Torres, Directora de Políticas Públicas"
-              }'></include>
-            </div>
-            
-            <!-- Evento 4 - Usando componente correctamente -->
-            <div class="w-1/2 mb-0">
-              <include src="./components/event-item.html" locals='{
-                "title": "Taller: Economía Circular en el Hogar", 
-                "date": "16 Mayo, 16:00 - 18:00", 
-                "location": "Sala de Workshops 2", 
-                "description": "Aprende técnicas prácticas para implementar principios de economía circular en tu vida cotidiana, reduciendo residuos y optimizando recursos.", 
-                "speaker": "Roberto Hernández, Consultor Internacional"
-              }'></include>
+          <!-- Replicando exactamente la estructura de Bootstrap -->
+          <div class="max-w-[1200px] mx-auto">
+            <div class="flex flex-wrap mx-[-15px]">
+              <!-- Evento 1 -->
+              <div class="w-full md:w-[100%] px-[15px] mb-8">
+                <div class="event-card bg-ecoGreen/5 p-6 rounded-lg shadow-md">
+                  <h2 class="text-xl font-bold text-ecoGreen mb-4">Conferencia Inaugural: El Futuro Circular</h2>
+                  <div class="flex flex-wrap gap-4 mb-4 text-sm text-ecoGray">
+                    <div class="flex items-center">
+                      <i class="far fa-calendar-alt text-ecoBlue mr-2"></i> 15 Mayo, 10:00 - 12:00
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-map-marker-alt text-ecoBlue mr-2"></i> Auditorio Principal
+                    </div>
+                  </div>
+                  <p class="text-ecoGray mb-4">Conferencia inaugural que explorará los fundamentos de la economía circular y su potencial para transformar nuestra economía y sociedad.</p>
+                  <p class="font-medium">Ponente: Carlos Rodríguez, Profesor de Economía Ambiental</p>
+                </div>
+              </div>
+              
+              <!-- Evento 2 -->
+              <div class="w-full md:w-[100%] px-[15px] mb-8">
+                <div class="event-card bg-ecoGreen/5 p-6 rounded-lg shadow-md">
+                  <h2 class="text-xl font-bold text-ecoGreen mb-4">Taller: Diseño Circular para Empresas</h2>
+                  <div class="flex flex-wrap gap-4 mb-4 text-sm text-ecoGray">
+                    <div class="flex items-center">
+                      <i class="far fa-calendar-alt text-ecoBlue mr-2"></i> 15 Mayo, 15:00 - 18:00
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-map-marker-alt text-ecoBlue mr-2"></i> Sala de Workshops 1
+                    </div>
+                  </div>
+                  <p class="text-ecoGray mb-4">Taller práctico donde aprenderás a implementar principios de diseño circular en productos y servicios empresariales.</p>
+                  <p class="font-medium">Ponente: María González, Directora de Sostenibilidad</p>
+                </div>
+              </div>
+              
+              <!-- Evento 3 -->
+              <div class="w-full md:w-[100%] px-[15px] mb-8">
+                <div class="event-card bg-ecoGreen/5 p-6 rounded-lg shadow-md">
+                  <h2 class="text-xl font-bold text-ecoGreen mb-4">Panel: Políticas Públicas para la Circularidad</h2>
+                  <div class="flex flex-wrap gap-4 mb-4 text-sm text-ecoGray">
+                    <div class="flex items-center">
+                      <i class="far fa-calendar-alt text-ecoBlue mr-2"></i> 16 Mayo, 10:00 - 12:00
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-map-marker-alt text-ecoBlue mr-2"></i> Auditorio Principal
+                    </div>
+                  </div>
+                  <p class="text-ecoGray mb-4">Panel de discusión sobre políticas públicas que pueden acelerar la transición hacia una economía circular a nivel local, regional y nacional.</p>
+                  <p class="font-medium">Ponente: Ana Torres, Directora de Políticas Públicas</p>
+                </div>
+              </div>
+              
+              <!-- Evento 4 -->
+              <div class="w-full md:w-[100%] px-[15px] mb-8">
+                <div class="event-card bg-ecoGreen/5 p-6 rounded-lg shadow-md">
+                  <h2 class="text-xl font-bold text-ecoGreen mb-4">Taller: Economía Circular en el Hogar</h2>
+                  <div class="flex flex-wrap gap-4 mb-4 text-sm text-ecoGray">
+                    <div class="flex items-center">
+                      <i class="far fa-calendar-alt text-ecoBlue mr-2"></i> 16 Mayo, 16:00 - 18:00
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-map-marker-alt text-ecoBlue mr-2"></i> Sala de Workshops 2
+                    </div>
+                  </div>
+                  <p class="text-ecoGray mb-4">Aprende técnicas prácticas para implementar principios de economía circular en tu vida cotidiana, reduciendo residuos y optimizando recursos.</p>
+                  <p class="font-medium">Ponente: Roberto Hernández, Consultor Internacional</p>
+                </div>
+              </div>
             </div>
           </div>
           
-          <!-- Formulario de Registro -->
-          <form name="registration" method="POST" data-netlify="true" class="bg-white rounded-lg shadow-lg p-8 md:p-12 mx-auto mt-12 max-w-[900px]">
+          <!-- Formulario de Registro - exactamente como en Bootstrap -->
+          <form name="registration" method="POST" data-netlify="true" class="bg-white rounded-lg shadow-lg p-8 md:p-12 mx-auto mt-12" style="max-width: 900px;">
             <h2 class="text-2xl font-bold text-ecoGreen text-center mb-8">Inscríbete a las Jornadas</h2>
             
             <div class="mx-[-15px]">
