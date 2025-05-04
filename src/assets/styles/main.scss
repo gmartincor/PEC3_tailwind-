@@ -1,30 +1,46 @@
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/**
- * Import variables
- */
+/* Base styles */
+@layer base {
+  body {
+    @apply font-montserrat text-ecoGray bg-gray-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-ecoGreen font-bold;
+  }
+}
 
-@import "variables";
-
-/**
- * Import npm dependencies
- * see: https://v2.parceljs.org/features/module-resolution/
- * see commented examples below
- */
-
-// @import "some-node-module";
-// @import "@some-company/some-node-module";
-
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
-
-@import "layouts/home";
-
-/**
- * Do NOT include anything else in this file!
- */
+/* Component extractions using @apply */
+@layer components {
+  /* Botón primario */
+  .btn-primary {
+    @apply inline-block py-2 px-6 bg-ecoGreen text-white font-semibold rounded-md transition-all duration-300 hover:bg-ecoGreen/90 hover:shadow-md;
+  }
+  
+  /* Botón outline */
+  .btn-outline-primary {
+    @apply inline-block py-2 px-6 border border-ecoGreen text-ecoGreen font-semibold rounded-md transition-all duration-300 hover:bg-ecoGreen hover:text-white;
+  }
+  
+  /* Tarjeta de evento */
+  .event-card {
+    @apply h-full bg-ecoGreen/5 rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-ecoGreen/10;
+  }
+  
+  /* Tarjeta de características */
+  .feature-card {
+    @apply h-full bg-white rounded-lg p-8 text-center shadow-md transition-all duration-300 hover:-translate-y-2;
+  }
+  
+  /* Estilos para formularios */
+  .form-control {
+    @apply w-full p-3 text-ecoGray bg-white border border-ecoGreen/20 rounded-md focus:outline-none focus:ring-2 focus:ring-ecoGreen/25 focus:border-ecoGreen/50 transition-all;
+  }
+  
+  .form-label {
+    @apply block font-semibold text-ecoGray mb-2;
+  }
+}

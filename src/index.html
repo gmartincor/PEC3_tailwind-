@@ -1,27 +1,79 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jornadas sobre economía circular organizadas en colaboración con el ayuntamiento">
+    <title>EcoCircular - Jornadas de Economía Circular</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <include src="./views/header.html"></include>
+
+    <main>
+      <!-- Sección principal / Póster -->
+      <section class="py-12">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <div class="bg-ecoGreen/10 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden shadow-eco-lg">
+            <!-- Círculos decorativos -->
+            <div class="absolute w-72 h-72 rounded-full bg-ecoBlue/10 -top-24 -right-24"></div>
+            <div class="absolute w-52 h-52 rounded-full bg-ecoGreen/10 -bottom-12 -left-12"></div>
+            
+            <!-- Contenido -->
+            <h1 class="text-4xl md:text-5xl font-extrabold text-ecoGreen mb-4 relative z-10">Jornadas de Economía Circular</h1>
+            <h2 class="text-xl md:text-2xl font-semibold text-ecoBlue mb-8 relative z-10">Construyendo un futuro sostenible</h2>
+            
+            <div class="flex justify-center mb-8 relative z-10">
+              <img src="./assets/images/circular-economy.svg" alt="Diagrama de economía circular" class="max-w-full w-72">
+            </div>
+            
+            <div class="mt-8 relative z-10">
+              <p class="font-semibold text-ecoGray mb-4">15-17 de Mayo, 2025 | Centro Cultural Municipal</p>
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="events.html" class="btn-primary">Inscríbete ahora</a>
+                <a href="index.html" class="btn-outline-primary">Más información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de características -->
+      <section class="py-12">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <h2 class="text-3xl font-bold text-ecoGreen text-center mb-12 relative">Nuestras Actividades</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Característica 1 -->
+            <include src="./components/feature-card.html" locals='{
+              "icon": "fas fa-chalkboard-teacher", 
+              "title": "Conferencias", 
+              "description": "Expertos nacionales e internacionales compartirán su conocimiento y experiencia en economía circular."
+            }'></include>
+            
+            <!-- Característica 2 -->
+            <include src="./components/feature-card.html" locals='{
+              "icon": "fas fa-hands-helping", 
+              "title": "Talleres", 
+              "description": "Participa en talleres prácticos para implementar la economía circular en tu entorno personal y profesional."
+            }'></include>
+            
+            <!-- Característica 3 -->
+            <include src="./components/feature-card.html" locals='{
+              "icon": "fas fa-users", 
+              "title": "Networking", 
+              "description": "Conecta con profesionales, empresas y administraciones comprometidas con la sostenibilidad."
+            }'></include>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    
+    <script src="./assets/scripts/main.js"></script>
   </body>
 </html>

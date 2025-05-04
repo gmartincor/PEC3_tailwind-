@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Fondo -->
+  <circle cx="400" cy="300" r="250" fill="#e8f5e9" />
+  
+  <!-- Círculo exterior -->
+  <circle cx="400" cy="300" r="220" fill="none" stroke="#2E8B57" stroke-width="5" stroke-dasharray="10,5" />
+  
+  <!-- Círculos internos -->
+  <g>
+    <!-- Círculo de producción -->
+    <circle cx="400" cy="160" r="60" fill="#4682B4" opacity="0.9" />
+    <text x="400" y="165" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">PRODUCCIÓN</text>
+    
+    <!-- Círculo de distribución -->
+    <circle cx="580" cy="300" r="60" fill="#20B2AA" opacity="0.9" />
+    <text x="580" y="305" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">DISTRIBUCIÓN</text>
+    
+    <!-- Círculo de consumo -->
+    <circle cx="400" cy="440" r="60" fill="#FFA500" opacity="0.9" />
+    <text x="400" y="445" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">CONSUMO</text>
+    
+    <!-- Círculo de reciclaje -->
+    <circle cx="220" cy="300" r="60" fill="#2E8B57" opacity="0.9" />
+    <text x="220" y="295" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">RECICLAJE</text>
+    <text x="220" y="315" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">RECUPERACIÓN</text>
+  </g>
+  
+  <!-- Flechas de conexión -->
+  <g fill="none" stroke="#333" stroke-width="4">
+    <!-- De producción a distribución -->
+    <path d="M 450 185 Q 520 220 550 250" stroke="#4682B4" marker-end="url(#arrowhead)" />
+    
+    <!-- De distribución a consumo -->
+    <path d="M 550 350 Q 520 380 450 415" stroke="#20B2AA" marker-end="url(#arrowhead)" />
+    
+    <!-- De consumo a reciclaje -->
+    <path d="M 350 415 Q 280 380 250 350" stroke="#FFA500" marker-end="url(#arrowhead)" />
+    
+    <!-- De reciclaje a producción -->
+    <path d="M 250 250 Q 280 220 350 185" stroke="#2E8B57" marker-end="url(#arrowhead)" />
+  </g>
+  
+  <!-- Definición de flecha -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Texto central -->
+  <circle cx="400" cy="300" r="90" fill="#ffffff" stroke="#2E8B57" stroke-width="3" />
+  <text x="400" y="290" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#2E8B57">ECONOMÍA</text>
+  <text x="400" y="320" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#2E8B57">CIRCULAR</text>
+</svg>

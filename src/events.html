@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eventos y talleres de las Jornadas de Economía Circular">
+    <title>Eventos - Jornadas de Economía Circular</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main>
+      <section class="py-12">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <h1 class="text-4xl font-bold text-ecoGreen text-center mb-12 relative after:content-[''] after:block after:w-20 after:h-1 after:bg-ecoOrange after:mx-auto after:mt-4 after:rounded">Eventos y Talleres</h1>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-[30px] max-w-5xl mx-auto">
+            <!-- Evento 1 -->
+            <include src="./components/event-item.html" locals='{
+              "title": "Conferencia Inaugural: El Futuro Circular", 
+              "date": "15 Mayo, 10:00 - 12:00", 
+              "location": "Auditorio Principal", 
+              "description": "Conferencia inaugural que explorará los fundamentos de la economía circular y su potencial para transformar nuestra economía y sociedad.", 
+              "speaker": "Carlos Rodríguez, Profesor de Economía Ambiental"
+            }'></include>
+            
+            <!-- Evento 2 -->
+            <include src="./components/event-item.html" locals='{
+              "title": "Taller: Diseño Circular para Empresas", 
+              "date": "15 Mayo, 15:00 - 18:00", 
+              "location": "Sala de Workshops 1", 
+              "description": "Taller práctico donde aprenderás a implementar principios de diseño circular en productos y servicios empresariales.", 
+              "speaker": "María González, Directora de Sostenibilidad"
+            }'></include>
+            
+            <!-- Evento 3 -->
+            <include src="./components/event-item.html" locals='{
+              "title": "Panel: Políticas Públicas para la Circularidad", 
+              "date": "16 Mayo, 10:00 - 12:00", 
+              "location": "Auditorio Principal", 
+              "description": "Panel de discusión sobre políticas públicas que pueden acelerar la transición hacia una economía circular a nivel local, regional y nacional.", 
+              "speaker": "Ana Torres, Directora de Políticas Públicas"
+            }'></include>
+            
+            <!-- Evento 4 -->
+            <include src="./components/event-item.html" locals='{
+              "title": "Taller: Economía Circular en el Hogar", 
+              "date": "16 Mayo, 16:00 - 18:00", 
+              "location": "Sala de Workshops 2", 
+              "description": "Aprende técnicas prácticas para implementar principios de economía circular en tu vida cotidiana, reduciendo residuos y optimizando recursos.", 
+              "speaker": "Roberto Hernández, Consultor Internacional"
+            }'></include>
+          </div>
+          
+          <!-- Formulario de Registro -->
+          <form name="registration" method="POST" data-netlify="true" class="bg-white rounded-lg shadow-lg p-8 md:p-12 max-w-3xl mx-auto mt-16">
+            <h2 class="text-2xl font-bold text-ecoGreen text-center mb-6">Inscríbete a las Jornadas</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="form-label">Nombre completo *</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              
+              <div>
+                <label for="email" class="form-label">Email *</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              
+              <div>
+                <label for="phone" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+              </div>
+              
+              <div>
+                <label for="organization" class="form-label">Organización/Empresa</label>
+                <input type="text" class="form-control" id="organization" name="organization">
+              </div>
+            </div>
+            
+            <div class="mt-6 mb-6">
+              <label for="events" class="form-label">Eventos a los que deseas asistir *</label>
+              <select multiple class="form-control" id="events" name="events[]" required>
+                <option value="inaugural">Conferencia Inaugural</option>
+                <option value="design-workshop">Taller: Diseño Circular para Empresas</option>
+                <option value="policy-panel">Panel: Políticas Públicas para la Circularidad</option>
+                <option value="home-workshop">Taller: Economía Circular en el Hogar</option>
+                <option value="networking">Evento de Networking</option>
+                <option value="closing">Ceremonia de Clausura</option>
+              </select>
+              <small class="text-sm text-ecoGray block mt-1">Mantén presionada la tecla Ctrl (o Cmd en Mac) para seleccionar múltiples opciones.</small>
+            </div>
+            
+            <div class="mt-6 mb-6">
+              <label for="message" class="form-label">Comentarios o preguntas</label>
+              <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+            </div>
+            
+            <div class="mt-6 mb-6">
+              <label class="flex items-start">
+                <input type="checkbox" id="privacy" name="privacy" required class="mt-1 mr-2">
+                <span class="text-ecoGray">Acepto la política de privacidad y el tratamiento de mis datos para gestionar mi inscripción *</span>
+              </label>
+            </div>
+            
+            <div class="text-center mt-8">
+              <button type="submit" class="btn-primary">Inscribirme</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <include src="./views/footer.html"></include>
+    
+    <script src="./assets/scripts/main.js"></script>
+  </body>
+</html>

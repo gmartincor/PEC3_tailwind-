@@ -1,15 +1,13 @@
 {
-  "name": "uoc-boilerplate",
-  "version": "3.11.0",
-  "private": true,
-  "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
+  "name": "pec3_tailwind",
+  "version": "1.0.0",
+  "description": "Proyecto con Tailwind CSS para Jornadas sobre Economía Circular",
   "scripts": {
-    "parcel:serve": "parcel -p 8123 --target web --open",
-    "parcel:build": "parcel build --target web --no-source-maps --no-cache",
-    "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
+    "parcel:serve": "parcel -p 8123 --target web --open",
+    "parcel:build": "parcel build --target web --no-source-maps --no-cache",
+    "clean": "rimraf dist .cache .cache-loader .parcel-cache"
   },
   "targets": {
     "web": {
@@ -21,27 +19,16 @@
       }
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uoc-advanced-html-css/uoc-boilerplate.git"
-  },
-  "author": {
-    "name": "Jordi Tarrida",
-    "email": "jorditarrida@uoc.edu"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues"
-  },
-  "homepage": "https://github.com/uoc-advanced-html-css/uoc-boilerplate#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
     "autoprefixer": "^10.4.20",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.13.3",
+    "postcss": "^8.4.38",
     "postcss-preset-env": "^10.1.3",
     "posthtml-include": "^2.0.1",
     "rimraf": "^6.0.1",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.1"
   }
 }
