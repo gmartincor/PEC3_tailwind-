@@ -25,14 +25,34 @@
     @apply inline-block py-2 px-6 border border-ecoGreen text-ecoGreen font-semibold rounded-md transition-all duration-300 hover:bg-ecoGreen hover:text-white;
   }
   
-  /* Tarjeta de evento */
+  /* Tarjeta de evento - Alineada con Bootstrap */
   .event-card {
-    @apply h-full bg-ecoGreen/5 rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-ecoGreen/10;
+    @apply h-full bg-ecoGreen/5 rounded-2xl p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:bg-ecoGreen/10;
   }
   
-  /* Tarjeta de características */
+  .event-title {
+    @apply font-bold text-xl text-ecoGreen mb-4;
+  }
+  
+  .event-details {
+    @apply flex flex-wrap gap-4 mb-4 text-sm text-ecoGray;
+  }
+  
+  .event-time, .event-location {
+    @apply flex items-center;
+  }
+  
+  .event-description {
+    @apply text-ecoGray leading-relaxed mb-4;
+  }
+  
+  .event-speaker {
+    @apply font-medium text-ecoGray;
+  }
+  
+  /* Tarjeta de características - Alineada con Bootstrap */
   .feature-card {
-    @apply h-full bg-white rounded-lg p-8 text-center shadow-md transition-all duration-300 hover:-translate-y-2;
+    @apply h-full bg-white rounded-2xl p-8 text-center shadow-md transition-all duration-300 hover:-translate-y-3;
   }
   
   /* Estilos para formularios */
