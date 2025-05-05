@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         'ecoGreen': '#2E8B57',
-        'ecoGreenDark': '#0A1F12', // Darkened version
+        'ecoGreenDark': '#0A1F12', 
         'ecoBlue': '#4682B4', 
         'ecoTeal': '#20B2AA',
         'ecoOrange': '#FFA500',
